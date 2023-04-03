@@ -26,7 +26,6 @@
 清理缓存 brew cleanup
 查看建议，例如升级等 brew doctor
 链接 brew link name
-
 ```
 
 ## Golang
@@ -42,14 +41,14 @@ brew install go
 启动： brew services start nginx
 重启： brew services restart nginx
 停止： brew services stop nginx
-查看： cat /usr/local/etc/nginx/nginx.conf
-编辑： vi /usr/local/etc/nginx/nginx.conf
-查看安装目录： brew list nginx
 
-localhost:8080
+查看安装目录： brew list nginx
+检查配置： nginx -t
 
 nginx配置tp5.0
-/usr/local/etc/nginx/servers/php-web-admin.conf
+
+vim /opt/homebrew/etc/nginx/servers/php-web-admin.conf
+
 server {
         listen       1992;
         server_name  localhost;
@@ -80,7 +79,6 @@ server {
         }
     }
 
-nginx 打开nginx
 nginx  重新加载配置|重启|停止|退出
 nginx -s reload|reopen|stop|quit
 nginx -t 测试配置是否有语法错误
@@ -241,25 +239,29 @@ java -version
 
 [DevStyle Eclipse 超级好看的主题，极力推荐](https://blog.csdn.net/Thinkingcao/article/details/89499869)
 
+[Eclipse+Spring boot 开发教程](https://www.cnblogs.com/lsdb/p/9783435.html)
+
 ### Maven
+
+maven 缓存目录： ~/.m2
+
+[mac maven](https://gitee.com/zhengqingya/java-developer-document/blob/master/%E7%9F%A5%E8%AF%86%E5%BA%93/Java/01-%E7%8E%AF%E5%A2%83/02-Maven/01-%E5%AE%89%E8%A3%85-mac.md)
 
 ```shell
 brew install maven
-
-maven缓存目录： ~/.m2
-
-https://blog.csdn.net/cungudafa/article/details/126743686
-
-https://gitee.com/zhengqingya/java-developer-document/blob/master/%E7%9F%A5%E8%AF%86%E5%BA%93/Java/01-%E7%8E%AF%E5%A2%83/02-Maven/01-%E5%AE%89%E8%A3%85-mac.md
 ```
 
 ### Android
 
-~/.gradle -> 4G 多
+[mac M1 安装 AndroidStudio 打开真机调试](https://blog.csdn.net/cungudafa/article/details/126743686)
+
+gradle 缓存目录： ~/.gradle -> 4G 多
 
 ```shell
+1.
 brew install --cask android-platform-tools
-或者 android studio安装好之后提价path
+
+2.android studio安装好之后提价path ↓
 export PATH="$HOME/Android/sdk/platform-tools:$PATH"
 export PATH="$HOME/Android/sdk/tools:$PATH"
 ```
