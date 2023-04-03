@@ -1,7 +1,8 @@
 # vscode
 
 ## settings.json
-``` json
+
+```json
 {
   // GO.START
   "go.useLanguageServer": true, //gopls解决vscode提示缓慢
@@ -20,20 +21,22 @@
   "editor.formatOnSave": true, //保存代码自动格式化
   "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?", // 执行文字相关的导航或操作时将用作文字分隔符的字符(`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?)
   "explorer.autoReveal": false, //取消打开文件目录的自动定位跟踪功能
+  "editor.stickyScroll.enabled": false, // 在编辑器顶部的滚动过程中显示嵌套的当前作用域。
   "explorer.compactFolders": false,
   "liveServer.settings.donotShowInfoMsg": true,
   "workbench.iconTheme": "vscode-icons", //资源文件夹图片主题
+  "editor.fontSize": 16,
   "terminal.integrated.fontSize": 16, //控制终端的字号(以像素为单位)。
   // "terminal.external.osxExec": "iTerm.app",
   // "terminal.integrated.shell.osx": "zsh",
-  // "editor.fontFamily": "Cascadia Code", // https://github.com/microsoft/cascadia-code
-  "editor.fontFamily": "Fira Code", // https://github.com/tonsky/FiraCode
+  "editor.fontFamily": "Cascadia Mono", // https://github.com/microsoft/cascadia-code
+  // "editor.fontFamily": "Fira Code", // https://github.com/tonsky/FiraCode
+  // "editor.fontLigatures": true, // 启用/禁用字体连字
   "terminal.integrated.fontFamily": "Meslo LG S for Powerline", // https://github.com/powerline/fonts
-  "editor.stickyScroll.enabled": true,
   // 一些编辑器颜色配置 START
   "workbench.colorCustomizations": {
     "editor.selectionHighlightBackground": "#0a76a8", //与所选内容具有相同内容的区域颜色
-    "editorCursor.foreground": "#01cd78", //编辑器光标颜色
+    "editorCursor.foreground": "#01cd78" //编辑器光标颜色
     // "editorBracketMatch.background": "#005c36", //匹配括号的背景色
     // "editor.findMatchBackground": "#e4393c" //搜索项颜色
     // "activityBar.foreground": "#03afff", //活动栏前景色，图标颜色
@@ -62,7 +65,7 @@
     // "strings": "#7fb785", //字符串颜色
     "comments": {
       // "fontStyle": "italic", // 注释字体样式 bold italic underline
-      // "foreground": "#aaaaaa" // 注释字体颜色
+      // "foreground": "#827575" // 注释字体颜色
     }
     // "keywords": "#FF0000", //关键字颜色
     // "types": "#FF0000", //类型定义颜色
@@ -73,21 +76,12 @@
   "html.format.wrapLineLength": 0, //禁用html单行限制字符
   "workbench.startupEditor": "newUntitledFile",
   "git.autofetch": true,
-  "todo-tree.general.tags": [
-    "BUG",
-    "HACK",
-    "FIXME",
-    "TODO",
-    "XXX",
-    "[ ]",
-    "[x]"
-  ],
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX", "[ ]", "[x]"],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-  "remote.SSH.remotePlatform": {
-    "192.168.0.188": "linux"
-  },
   "projectManager.sortList": "Recent",
-  "editor.fontSize": 17,
+
+  /*  prettier的配置 */
+  // 使能每一种语言默认格式化规则
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -97,5 +91,23 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100, // 超过最大值换行
+  // markdown
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor"
+  },
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "editor.cursorSmoothCaretAnimation": "on"
 }
 ```
