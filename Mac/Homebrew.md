@@ -210,6 +210,21 @@ nvm unalias <name> ## 删除已定义的别名
 nvm reinstall-packages <version> ## 在当前版本node环境下，重新全局安装指定版本号的npm包
 ```
 
+### pnpm
+
+```
+安装
+npm install pnpm -g
+查看源
+pnpm config get registry
+切换淘宝源
+pnpm config set registry https://registry.npm.taobao.org/
+启动
+pnpm run dev
+查看缓存目录
+pnpm store path
+```
+
 ## Java
 
 ### JDK
